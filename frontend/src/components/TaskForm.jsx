@@ -6,10 +6,10 @@ const TaskForm = ({ onTaskCreated }) => {
     title: "",
     description: "",
     dueDate: "",
-    priority: "low",
+    priority: "Low",
     assignedTo: "", 
   });
-
+ 
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
