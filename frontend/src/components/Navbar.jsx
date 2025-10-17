@@ -19,15 +19,22 @@ export default function Navbar() {
     fetchUser();
   }, []);
 
+
+
   const handleLogout = async () => {
-    try {
-      await API.get("/auth/logout");
-      setUser(null);
-      navigate("/");
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  try {
+    await API.get("/auth/logout", { withCredentials: true });
+    setUser(null); 
+    navigate("/");  
+  } catch (err) {
+    console.error(err);
+  }
+};
+
+
+
+
+
 
   // ✅ Styles
   const navStyle = {

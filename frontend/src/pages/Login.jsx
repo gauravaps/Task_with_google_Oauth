@@ -7,7 +7,9 @@ export default function Login() {
 
 
 const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5000/auth/google";
+    // window.location.href = "http://localhost:5000/auth/google";
+      window.location.href = "https://task-manager-backend-k6jq.onrender.com/auth/google";
+
   };
 
 

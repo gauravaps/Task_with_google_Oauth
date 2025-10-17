@@ -8,7 +8,7 @@ const TaskList = ({ adminMode = false ,refreshTrigger  }) => {
   const [page, setPage] = useState(1);
   const [priorityFilter, setPriorityFilter] = useState("");
   const [totalPages, setTotalPages] = useState(1);
-
+  
   const fetchTasks = async () => {
     try {
       let url;

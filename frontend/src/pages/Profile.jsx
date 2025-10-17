@@ -13,7 +13,7 @@ export default function Profile() {
       console.error(err);
     }
   };
-
+ 
   useEffect(() => {
     fetchProfile();
   }, []);

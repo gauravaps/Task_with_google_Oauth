@@ -20,19 +20,26 @@ dotenv.config();
   
 
 
-
-// express app
+ 
+// express app instence...
 const app = express(); 
  
+
+//for render 
+app.set("trust proxy", 1);
+
 // middlewares
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin:process.env.CLIENT_URL,
   credentials: true
 }));
 
+
+
+
 app.use(express.json());
 
-//set cookie-parser middleware
+//set cookie-parser middleware for cookies
 app.use(cookieParser());
 
 app.use(passport.initialize());
